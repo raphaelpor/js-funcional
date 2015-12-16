@@ -1,16 +1,20 @@
-// pure fuctions
-var number = 1;
-var increment = function() {
-    return number += 1;
-};
+// Pure functions
+// -- Impure
+const number = 1;
+
+const increment = () => number += 1;
+
 console.log(increment());
+// --> 2
 
-var increment = function(n) {
-    return n + 1;
-};
+// -- Pure
+const increment = n => n + 1;
+
 console.log(increment(1));
+// --> 2
 
-// Sum
+// Higher-order functions
+// -- Sum
 let sum = (x, y) => {
   return x + y;
 }
